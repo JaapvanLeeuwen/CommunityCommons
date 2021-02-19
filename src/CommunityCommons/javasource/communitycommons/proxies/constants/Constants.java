@@ -10,6 +10,11 @@ public class Constants
 {
 	// These are the constants for the CommunityCommons module
 
+	public static java.math.BigDecimal getEARTHRADIUS()
+	{
+		return (java.math.BigDecimal)Core.getConfiguration().getConstantValue("CommunityCommons.EARTHRADIUS");
+	}
+
 	/**
 	* Restricted to 10 files at once for Mendix Cloud v4 compatibility. If you need to merge more than 10 files increase the number here. Setting the value to <=0 means unlimited.
 	* 

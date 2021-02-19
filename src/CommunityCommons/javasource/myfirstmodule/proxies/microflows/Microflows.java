@@ -15,6 +15,22 @@ import com.mendix.systemwideinterfaces.core.IMendixObject;
 public class Microflows
 {
 	// These are the microflows for the MyFirstModule module
+	public static void aCT_CalculateDistanceBetweenGeoPoints(IContext context, myfirstmodule.proxies.GeolocationHelper _geolocationHelper)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("GeolocationHelper", _geolocationHelper == null ? null : _geolocationHelper.getMendixObject());
+		Core.microflowCall("MyFirstModule.ACT_CalculateDistanceBetweenGeoPoints").withParams(params).execute(context);
+	}
+	public static void aCT_Logout(IContext context)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		Core.microflowCall("MyFirstModule.ACT_Logout").withParams(params).execute(context);
+	}
+	public static void aCT_ReturnUuid(IContext context)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		Core.microflowCall("MyFirstModule.ACT_ReturnUuid").withParams(params).execute(context);
+	}
 	public static myfirstmodule.proxies.ImageSpecialization createImage(IContext context)
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();
